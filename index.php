@@ -26,21 +26,21 @@ function post_type_nateevo() {
 	
 		register_post_type( 'products', 
 			array( 'labels' => array(
-				'name' => __( 'Productos', 'andres-dev.com' ),
-				'singular_name' => __( 'Producto', 'andres-dev.com' ),
-				'all_items' => __( 'Todos los productos', 'andres-dev.com' ), 
-				'add_new' => __( 'Agregar nuevo', 'andres-dev.com' ),
-				'add_new_item' => __( 'Agregar nuevo producto', 'andres-dev.com' ), 
-				'edit' => __( 'Editar', 'andres-dev.com' ), 
-				'edit_item' => __( 'Editar producto', 'andres-dev.com' ), 
-				'new_item' => __( 'Nuevo producto', 'andres-dev.com' ), 
-				'view_item' => __( 'Ver producto', 'andres-dev.com' ), 
-				'search_items' => __( 'Buscar producto', 'andres-dev.com' ), 
-				'not_found' =>  __( 'No se encontraron', 'andres-dev.com' ), 
-				'not_found_in_trash' => __( 'No se encontraron', 'andres-dev.com' ), 
+				'name' => __( 'Productos', 'nateevo' ),
+				'singular_name' => __( 'Producto', 'nateevo' ),
+				'all_items' => __( 'Todos los productos', 'nateevo' ), 
+				'add_new' => __( 'Agregar nuevo', 'nateevo' ),
+				'add_new_item' => __( 'Agregar nuevo producto', 'nateevo' ), 
+				'edit' => __( 'Editar', 'nateevo' ), 
+				'edit_item' => __( 'Editar producto', 'nateevo' ), 
+				'new_item' => __( 'Nuevo producto', 'nateevo' ), 
+				'view_item' => __( 'Ver producto', 'nateevo' ), 
+				'search_items' => __( 'Buscar producto', 'nateevo' ), 
+				'not_found' =>  __( 'No se encontraron', 'nateevo' ), 
+				'not_found_in_trash' => __( 'No se encontraron', 'nateevo' ), 
 				'parent_item_colon' => ''
 				),
-				'description' => __( 'Post type Productos', 'andres-dev.com' ),
+				'description' => __( 'Post type Productos', 'nateevo' ),
 				'public' => true,
 				'publicly_queryable' => true,
 				'exclude_from_search' => false,
@@ -73,16 +73,16 @@ function taxonomy_genres(){
 			array('products'), 
 			array('hierarchical' => true,    
 				'labels' => array(
-					'name' => __( 'Géneros', 'andres-dev.com' ), 
-					'singular_name' => __( 'Género', 'andres-dev.com' ), 
-					'search_items' =>  __( 'Buscar Géneros', 'andres-dev.com' ), 
-					'all_items' => __( 'Todos los Géneros', 'andres-dev.com' ), 
+					'name' => __( 'Géneros', 'nateevo' ), 
+					'singular_name' => __( 'Género', 'nateevo' ), 
+					'search_items' =>  __( 'Buscar Géneros', 'nateevo' ), 
+					'all_items' => __( 'Todos los Géneros', 'nateevo' ), 
 					'parent_item' => __( 'Génre padre', 'bonestheme' ), 
 					'parent_item_colon' => __( 'Génre padre:', 'bonestheme' ), 
-					'edit_item' => __( 'Editar Género', 'andres-dev.com' ), 
-					'update_item' => __( 'Actualizar Género', 'andres-dev.com' ), 
-					'add_new_item' => __( 'Agregar nuevo Género', 'andres-dev.com' ), 
-					'new_item_name' => __( 'Nuevo Género de nombre:', 'andres-dev.com' ) 
+					'edit_item' => __( 'Editar Género', 'nateevo' ), 
+					'update_item' => __( 'Actualizar Género', 'nateevo' ), 
+					'add_new_item' => __( 'Agregar nuevo Género', 'nateevo' ), 
+					'new_item_name' => __( 'Nuevo Género de nombre:', 'nateevo' ) 
 				),
 				'show_admin_column' => true, 
 				'show_ui' => true,
@@ -103,14 +103,14 @@ function taxonomy_attributes(){
 			array('products'), 
 			array('hierarchical' => false,    
 				'labels' => array(
-					'name' => __( 'Atributos', 'andres-dev.com' ), 
-					'singular_name' => __( 'Atributo', 'andres-dev.com' ), 
-					'search_items' =>  __( 'Buscar Atributo', 'andres-dev.com' ), 
-					'all_items' => __( 'Todos los Atributos', 'andres-dev.com' ), 
-					'edit_item' => __( 'Editar Atributo', 'andres-dev.com' ), 
-					'update_item' => __( 'Actualizar Atributo', 'andres-dev.com' ), 
-					'add_new_item' => __( 'Agregar nuevo Atributo', 'andres-dev.com' ), 
-					'new_item_name' => __( 'Nuevo Atributo de nombre:', 'andres-dev.com' ) 
+					'name' => __( 'Atributos', 'nateevo' ), 
+					'singular_name' => __( 'Atributo', 'nateevo' ), 
+					'search_items' =>  __( 'Buscar Atributo', 'nateevo' ), 
+					'all_items' => __( 'Todos los Atributos', 'nateevo' ), 
+					'edit_item' => __( 'Editar Atributo', 'nateevo' ), 
+					'update_item' => __( 'Actualizar Atributo', 'nateevo' ), 
+					'add_new_item' => __( 'Agregar nuevo Atributo', 'nateevo' ), 
+					'new_item_name' => __( 'Nuevo Atributo de nombre:', 'nateevo' ) 
 				),
 				'show_admin_column' => true, 
 				'show_ui' => true,
@@ -144,9 +144,9 @@ $config = array(
 
 $my_meta = new AT_Meta_Box($config);
 
-$my_meta->addDate($prefix.'cf_date',array('name'=> __('Select date', 'nateevo') ,'format' => 'd/m/yy'));
-$my_meta->addImage($prefix.'cf_image',array('name'=> __('Select image','nateevo' )));
-$my_meta->addWysiwyg($prefix.'cf_description',array('name'=> __('Rich text','nateevo' ),'media_buttons' => false));
+$my_meta->addDate($prefix.'cf_date',array('name'=> __( 'Select date', 'nateevo' ) ,'format' => 'd/m/yy'));
+$my_meta->addImage($prefix.'cf_image',array('name'=> __( 'Select image', 'nateevo' )));
+$my_meta->addWysiwyg($prefix.'cf_description',array('name'=> __( 'Rich text', 'nateevo' ),'media_buttons' => false));
  
 $my_meta->Finish();
 
