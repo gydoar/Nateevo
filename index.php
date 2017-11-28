@@ -51,11 +51,9 @@ function post_type_nateevo() {
 				'capability_type' => 'post',
 				'hierarchical' => false,
 				
-				'supports' => array( 'title', 'editor', 'thumbnail', 'custom-fields', 'page-attributes')
+				'supports' => array( 'title', 'editor', 'thumbnail', 'page-attributes')
 			) 
 		);
-
-
 
 	}
 	
@@ -122,3 +120,92 @@ function taxonomy_attributes(){
 
 add_action( 'init', 'taxonomy_attributes');
 
+
+/*--------- Custom Fields ----------*/
+
+require_once("meta-box-class/my-meta-box-class.php");
+
+/*
+* configure your meta box
+*/
+$config = array(
+    'id' => 'demo_meta_box',             // meta box id, unique per meta box 
+    'title' => 'Campos adicionales',      // meta box title
+    'pages' => array('products'),    // post types, accept custom post types as well, default is array('post'); optional
+    'context' => 'normal',               // where the meta box appear: normal (default), advanced, side; optional
+    'priority' => 'high',                // order of meta box: high (default), low; optional
+    'fields' => array(),                 // list of meta fields (can be added by field arrays) or using the class's functions
+    'local_images' => false,             // Use local or hosted images (meta box images for add/remove)
+    'use_with_theme' => false            //change path if used with theme set to true, false for a plugin or anything else for a custom path(default false).
+);
+
+
+/*
+* Initiate your meta box
+*/
+$my_meta = new AT_Meta_Box($config);
+//date field
+$my_meta->addDate($prefix.'cf_date',array('name'=> 'Seleccionar fecha ','format' => 'd/m/yy'));
+//Image field
+$my_meta->addImage($prefix.'cf_image',array('name'=> 'Seleccionar imagen '));
+//wysiwyg field
+$my_meta->addWysiwyg($prefix.'cf_description',array('name'=> 'Texto enriquecido ','media_buttons' => false));
+ 
+/*
+* Don't Forget to Close up the meta box deceleration
+*/
+//Finish Meta Box Deceleration
+$my_meta->Finish();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*-------------------------------------------------------------------------------
+	Custom Columns
+-------------------------------------------------------------------------------*/
+
+/**
+ * Función que añade columnas al listado de casos. En el "add_filter"
+ * se cambia el post type donde afecta el filtro de la siguiente manera:
+ * manage_edit-{{post_type}}_columns.
+ */
+add_filter('manage_edit-products_columns', 'nx_edit_columns');
+function nx_edit_columns( $columns ) {
+    $columns = array(
+    	'cb' => '',
+        'title' => __( 'Título' ),
+        'image' => __( 'Imagen' ),
+    );
+    return $columns;
+}
+
+/**
+ * Función para mostrar contenido dentro de las columnas.
+ */
+add_action( 'manage_products_posts_custom_column', 'my_manage_products_columns', 10, 2 );
+function my_manage_products_columns( $column, $post_id ) {
+	global $post;
+
+	switch($column){
+		case 'image':
+			$saved_data = get_post_meta($post->ID,'cf_image',true);
+			$attachment_id = $saved_data['url'];
+
+			echo '<img width="100px" height="100px" src="'.$attachment_id.'">';
+			break;
+
+		default :
+			break;
+	}
+}
