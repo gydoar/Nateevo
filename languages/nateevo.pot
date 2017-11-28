@@ -1,11 +1,11 @@
-# Copyright (C) 2017 
-# This file is distributed under the same license as the  package.
+# Copyright (C) 2017 Nateevo
+# This file is distributed under the same license as the Nateevo package.
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: \n"
+"Project-Id-Version: Nateevo 1.0\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/tag/nateevo\n"
-"POT-Creation-Date: 2017-11-28 12:36-0500\n"
+"POT-Creation-Date: 2017-11-28 18:39-0500\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -13,146 +13,6 @@ msgstr ""
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "X-Generator: Poedit 2.0.4\n"
-
-#: index.php:29
-msgid "Productos"
-msgstr ""
-
-#: index.php:30
-msgid "Producto"
-msgstr ""
-
-#: index.php:31
-msgid "Todos los productos"
-msgstr ""
-
-#: index.php:32
-msgid "Agregar nuevo"
-msgstr ""
-
-#: index.php:33
-msgid "Agregar nuevo producto"
-msgstr ""
-
-#: index.php:34
-msgid "Editar"
-msgstr ""
-
-#: index.php:35
-msgid "Editar producto"
-msgstr ""
-
-#: index.php:36
-msgid "Nuevo producto"
-msgstr ""
-
-#: index.php:37
-msgid "Ver producto"
-msgstr ""
-
-#: index.php:38
-msgid "Buscar producto"
-msgstr ""
-
-#: index.php:39 index.php:40
-msgid "No se encontraron"
-msgstr ""
-
-#: index.php:43
-msgid "Post type Productos"
-msgstr ""
-
-#: index.php:76
-msgid "Géneros"
-msgstr ""
-
-#: index.php:77
-msgid "Género"
-msgstr ""
-
-#: index.php:78
-msgid "Buscar Géneros"
-msgstr ""
-
-#: index.php:79
-msgid "Todos los Géneros"
-msgstr ""
-
-#: index.php:80
-msgid "Génre padre"
-msgstr ""
-
-#: index.php:81
-msgid "Génre padre:"
-msgstr ""
-
-#: index.php:82
-msgid "Editar Género"
-msgstr ""
-
-#: index.php:83
-msgid "Actualizar Género"
-msgstr ""
-
-#: index.php:84
-msgid "Agregar nuevo Género"
-msgstr ""
-
-#: index.php:85
-msgid "Nuevo Género de nombre:"
-msgstr ""
-
-#: index.php:106
-msgid "Atributos"
-msgstr ""
-
-#: index.php:107
-msgid "Atributo"
-msgstr ""
-
-#: index.php:108
-msgid "Buscar Atributo"
-msgstr ""
-
-#: index.php:109
-msgid "Todos los Atributos"
-msgstr ""
-
-#: index.php:110
-msgid "Editar Atributo"
-msgstr ""
-
-#: index.php:111
-msgid "Actualizar Atributo"
-msgstr ""
-
-#: index.php:112
-msgid "Agregar nuevo Atributo"
-msgstr ""
-
-#: index.php:113
-msgid "Nuevo Atributo de nombre:"
-msgstr ""
-
-#: index.php:147
-msgid "Select date"
-msgstr ""
-
-#: index.php:148
-msgid "Select image"
-msgstr ""
-
-#: index.php:149
-msgid "Rich text"
-msgstr ""
-
-#: index.php:160
-msgid "Título"
-msgstr ""
-
-#: index.php:161
-msgid "Imagen"
-msgstr ""
 
 #: meta-box-class/my-meta-box-class.php:420
 #: meta-box-class/my-meta-box-class.php:459
@@ -174,4 +34,164 @@ msgstr ""
 #: meta-box-class/my-meta-box-class.php:1824
 #: meta-box-class/my-meta-box-class.php:1832
 msgid "Sorry, you cannot upload this file type for this field."
+msgstr ""
+
+#: nateevo.php:29
+msgid "Productos"
+msgstr ""
+
+#: nateevo.php:30
+msgid "Producto"
+msgstr ""
+
+#: nateevo.php:31
+msgid "Todos los productos"
+msgstr ""
+
+#: nateevo.php:32
+msgid "Agregar nuevo"
+msgstr ""
+
+#: nateevo.php:33
+msgid "Agregar nuevo producto"
+msgstr ""
+
+#: nateevo.php:34
+msgid "Editar"
+msgstr ""
+
+#: nateevo.php:35
+msgid "Editar producto"
+msgstr ""
+
+#: nateevo.php:36
+msgid "Nuevo producto"
+msgstr ""
+
+#: nateevo.php:37
+msgid "Ver producto"
+msgstr ""
+
+#: nateevo.php:38
+msgid "Buscar producto"
+msgstr ""
+
+#: nateevo.php:39 nateevo.php:40
+msgid "No se encontraron"
+msgstr ""
+
+#: nateevo.php:43
+msgid "Post type Productos"
+msgstr ""
+
+#: nateevo.php:76
+msgid "Géneros"
+msgstr ""
+
+#: nateevo.php:77
+msgid "Género"
+msgstr ""
+
+#: nateevo.php:78
+msgid "Buscar Géneros"
+msgstr ""
+
+#: nateevo.php:79
+msgid "Todos los Géneros"
+msgstr ""
+
+#: nateevo.php:80
+msgid "Génre padre"
+msgstr ""
+
+#: nateevo.php:81
+msgid "Génre padre:"
+msgstr ""
+
+#: nateevo.php:82
+msgid "Editar Género"
+msgstr ""
+
+#: nateevo.php:83
+msgid "Actualizar Género"
+msgstr ""
+
+#: nateevo.php:84
+msgid "Agregar nuevo Género"
+msgstr ""
+
+#: nateevo.php:85
+msgid "Nuevo Género de nombre:"
+msgstr ""
+
+#: nateevo.php:106
+msgid "Atributos"
+msgstr ""
+
+#: nateevo.php:107
+msgid "Atributo"
+msgstr ""
+
+#: nateevo.php:108
+msgid "Buscar Atributo"
+msgstr ""
+
+#: nateevo.php:109
+msgid "Todos los Atributos"
+msgstr ""
+
+#: nateevo.php:110
+msgid "Editar Atributo"
+msgstr ""
+
+#: nateevo.php:111
+msgid "Actualizar Atributo"
+msgstr ""
+
+#: nateevo.php:112
+msgid "Agregar nuevo Atributo"
+msgstr ""
+
+#: nateevo.php:113
+msgid "Nuevo Atributo de nombre:"
+msgstr ""
+
+#: nateevo.php:147
+msgid "Select date"
+msgstr ""
+
+#: nateevo.php:148
+msgid "Select image"
+msgstr ""
+
+#: nateevo.php:149
+msgid "Rich text"
+msgstr ""
+
+#: nateevo.php:160
+msgid "Título"
+msgstr ""
+
+#: nateevo.php:161
+msgid "Imagen"
+msgstr ""
+
+#. Plugin Name of the plugin/theme
+msgid "Nateevo"
+msgstr ""
+
+#. Plugin URI of the plugin/theme
+msgid "https://github.com/gydoar/Nateevo"
+msgstr ""
+
+#. Description of the plugin/theme
+msgid "Plugin Post type"
+msgstr ""
+
+#. Author of the plugin/theme
+msgid "ANDRES DEV"
+msgstr ""
+
+#. Author URI of the plugin/theme
+msgid "https://andres-dev.com"
 msgstr ""
