@@ -1,12 +1,14 @@
 <?php
 /*
-Plugin Name: nateevo
+Plugin Name: Nateevo
 Plugin URI: https://github.com/gydoar/Nateevo
 Description: Plugin Post type
 Version: 1.0
 Author: ANDRES DEV
 Author URI: https://andres-dev.com
 License: GPL2
+Text Domain: nateevo
+Domain Path: /languages
 */
 
 
@@ -138,12 +140,13 @@ $config = array(
 );
 
 
+/*--------- Campos a Internacionalizar ----------*/
 
 $my_meta = new AT_Meta_Box($config);
 
-$my_meta->addDate($prefix.'cf_date',array('name'=> 'Seleccionar fecha ','format' => 'd/m/yy'));
-$my_meta->addImage($prefix.'cf_image',array('name'=> 'Seleccionar imagen '));
-$my_meta->addWysiwyg($prefix.'cf_description',array('name'=> 'Texto enriquecido ','media_buttons' => false));
+$my_meta->addDate($prefix.'cf_date',array('name'=> __('Select date', 'nateevo') ,'format' => 'd/m/yy'));
+$my_meta->addImage($prefix.'cf_image',array('name'=> __('Select image','nateevo' )));
+$my_meta->addWysiwyg($prefix.'cf_description',array('name'=> __('Rich text','nateevo' ),'media_buttons' => false));
  
 $my_meta->Finish();
 
@@ -176,4 +179,16 @@ function nateevo_manage_products_columns( $column, $post_id ) {
 		default :
 			break;
 	}
+}
+
+
+
+add_action('init', 'nateevo_plugin_load_textdomain');
+
+function nateevo_plugin_load_textdomain() {
+	
+	$text_domain	= 'nateevo';
+	$path_languages = basename(dirname(__FILE__)).'/languages/';
+
+ 	load_plugin_textdomain($text_domain, false, $path_languages );
 }
